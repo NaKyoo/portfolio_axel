@@ -27,7 +27,7 @@ html, body {
 }
 
 :root {
-    --primary-color: #d3bb0b;
+    --primary-color: #9e9c0e;
     --seconday-color: black;
     --third-color: white;
     --fourth-color: #b30707;
@@ -63,7 +63,7 @@ body {
 
 #intro-text {
     font-family: "Droid Sans", sans-serif;
-    font-size: 2rem;
+    font-size: 3.4vw;
     color: #44eeee; /* Texte blanc */
     text-align: center;
     opacity: 0; /* Initialement invisible */
@@ -84,25 +84,32 @@ header {
     right: 0;
     z-index: 100;
     width: 100%;
+    display: flex;
+    justify-content: center; /* Centre horizontalement tout le contenu du header */
+    align-items: center; /* Centre verticalement les éléments */
+    padding: 1em 0; /* Espacement interne du header (haut-bas) */
 }
+
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position : relative;
-    margin : 2em;
+    justify-content: flex-end; /* Aligne les éléments du nav à droite */
+    background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent pour laisser transparaître l'arrière-plan */
+    backdrop-filter: blur(10px); /* Applique un flou à l'arrière-plan */
+    border-radius: 40px; /* Coins arrondis pour un effet plus doux */
+    padding: 1em; /* Espacement interne */
 }
 nav ul {
     display: flex;
     list-style: none;
     margin: 0;
+    align-items: center;
 }
 
 nav ul li {
     margin: 0 2em;
     font-size: 1.6em;
     font-family: "Starjhol", sans-serif;
-    color : var(--primary-color);
+    color: var(--primary-color);
     filter: brightness(150%);
 }
 .menu a {
@@ -118,9 +125,11 @@ nav ul li {
 .logo img {
     width: 5em;
     height: 5em;
+    margin-right: 25em; /* Ajoute un petit espace entre le logo et le nav */
+    margin-left: 4em;
 }
 
-/*                        STYLE MAIN                       */
+/*                        STYLE MAIN/CONTENT                      */
 
 main {
     display: flex;
@@ -130,19 +139,23 @@ main {
     box-sizing: border-box; /* Assure une bonne gestion des dimensions */
 }
 
-
+.content {
+    position: relative;
+    margin-top: 50em;
+}
 
 /*                        STYLE TITLE                      */
 
 .title {
     position: relative; /* Nécessaire pour que les enfants (h1, h2) en position absolue se basent sur .title */
     width: 100%; /* S'étend sur toute la largeur */
-    height: 100%; /* S'adapte à la hauteur de l'écran */
+    min-height: 60vh; /* Augmenté pour assurer qu'il occupe suffisamment d'espace */
     display: flex; /* Utilisation de Flexbox pour centrer facilement */
     flex-direction: column; /* Aligne les enfants verticalement */
     justify-content: center; /* Centre les enfants verticalement */
     align-items: center; /* Centre les enfants horizontalement */
     text-align: center; /* Centre le texte */
+    margin-top: 40em;
 }
 
 
@@ -152,31 +165,28 @@ main {
     left: 50%; /* Centre l'image horizontalement */
     transform: translate(-50%, -50%); /* Ajuste le point d'origine au centre */
     z-index: -1; /* Place l'image derrière le texte */
-    width: 50em;
+    width: 40em;
     height: auto;
-    margin-top: 10em;
 
 }
 
 .title h1 {
-    font-size: 15em; /* Grand titre */
+    font-size: 10em; /* Grand titre */
     color: var(--primary-color);
     font-family: "Galaxy Outlined Italic", sans-serif;
     white-space: nowrap; /* Empêche le changement de ligne */
-    margin: 0; /* Évite un éventuel décalage dû aux marges par défaut */
+    margin: 0;
     margin-top: 1.5em;
-    opacity: 0.7;
     filter: brightness(150%);
 
 }
 
 .title h2 {
-    font-size: 2.5em; /* Sous-titre plus petit */
+    font-size: 3.5em; /* Sous-titre plus petit */
     color: var(--primary-color);
     font-family: "Starjhol", sans-serif;
     white-space: nowrap; /* Empêche le changement de ligne */
-    margin: 0; /* Supprime toute autre marge par défaut */
-    opacity: 0.7;
+    margin: 0;
     filter: brightness(150%);
 }
 
@@ -186,4 +196,368 @@ main {
 
 /*                        STYLE PROFILE                      */
 
+.presentation {
+    position: relative;
+    display: flex; /* Utilisation de Flexbox pour un alignement vertical */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    text-align: center;
+    top: 45em;
+    min-height: 60vh; /* Assure que la section prend assez de place */
+    margin-left : 20em;
+    margin-right: 20em;
 
+}
+.presentation-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.presentation h2 {
+    font-size: 3.5em; /* Sous-titre plus petit */
+    color: var(--primary-color);
+    font-family: "Galaxy Outlined Italic", sans-serif;
+    white-space: nowrap; /* Empêche le changement de ligne */
+    margin: 0;
+    filter: brightness(150%);
+    border: 3px solid var(--primary-color); /* Bordure autour de la boîte */
+    border-radius: 15px; /* Coins arrondis */
+    padding: 0.5em; /* Espacement interne */
+}
+
+/*                        ABOUT ME                    */
+
+
+.about-me {
+    display: flex;
+    justify-content: space-between; /* Espacement entre les deux colonnes */
+    width: 100%; /* Pour s'assurer que ça prend toute la largeur disponible */
+    margin-top: 2em; /* Un petit espace au-dessus des colonnes */
+}
+
+.about-me h3 {
+    font-size: 1.6em;
+}
+.about-me p {
+    font-size : 0.9em;
+    line-height: 1.5em;
+}
+
+.about-me-1-2, .about-me-2-2 {
+    width: 48%; /* Chaque partie prend 48% de la largeur, laissant un petit espace entre elles */
+
+    box-sizing: border-box; /* Prise en compte du padding dans la largeur */
+}
+
+.about-me-1-2 {
+    margin-right: 2%; /* Un petit espace entre les deux colonnes */
+    font-family: "Arial", sans-serif;
+    font-size: 1.5em;
+    text-align: left;
+    padding: 0.8em;
+    gap: 20px; /* Espacement entre l'image et le texte */
+}
+
+.about-me-2-2 {
+    font-family: "Arial", sans-serif;
+    font-size: 1.5em;
+    text-align: left;
+    padding: 0.8em;
+}
+
+
+.about-me-2-2 .collaborate{
+    text-align: center;
+}
+
+span {
+    font-weight: bold;
+    color: var(--primary-color);
+    filter: brightness(150%);
+}
+
+
+/*                        HOLOCRON COMPETENCES                     */
+
+/* Conteneur des Holocrons */
+.holocron-container {
+    position: relative;
+    width: 50%; /* Largeur du conteneur, ajustable */
+    height: 50vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Organise les holocrons en colonne */
+}
+
+/* Styles des Holocrons (les carrés) */
+.holocron {
+    position: absolute;
+    width: 8vw;  /* Réduire la taille */
+    height: 8vw;  /* Réduire la taille */
+    background-image: url('../portfolio_axel/assets/images/holocron.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+}
+
+
+/* Au survol, on agrandit légèrement le Holocron */
+.holocron:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Contenu des Holocrons (les textes) */
+.holocron-content {
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    display: none; /* Masquer le contenu au départ */
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateX(-10px) translateY(-50%); /* Positionne le texte à gauche du carré */
+    width: 220px;
+    background-color: #000; /* Fond noir */
+    padding: 15px;
+    border-radius: 15px;
+    border: 3px solid #ffcc00; /* Bordure jaune pour donner l'effet Star Wars */
+    box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8); /* Ombre lumineuse */
+    font-size: 1.1em;
+    letter-spacing: 1.5px;
+    transform-origin: center center;
+    z-index: 2; /* Assure que la box est au-dessus du carré */
+    transition: transform 0.3s ease;
+    padding: 2em;
+}
+.holocron:hover .holocron-content {
+    display: block; /* Afficher le contenu lorsque le holocron est survolé */
+    transform: translateX(-10px) translateY(-50%) scale(1.05); /* Animation lors du survol */
+}
+
+/* Styles des titres et textes dans les Holocrons */
+.holocron h3 {
+    font-size: 1.5em;
+    font-family: 'Galaxy Outlined Italic', sans-serif;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #ffcc00; /* Ombre sur le texte pour un effet lumineux */
+    text-align: center;
+}
+
+.holocron p {
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+    filter: brightness(150%);
+    font-family: 'Galaxy Outlined Italic', sans-serif;
+    color : var(--primary-color);
+}
+
+/* Positionner les Holocrons en forme de triangle */
+
+/* Holocron 1 (Sommet du triangle) */
+#holocron1 {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Holocron 2 (Bas gauche) */
+#holocron2 {
+    top: 50%;
+    left: 5%;
+    transform: translateX(-50%);
+}
+
+/* Holocron 3 (Bas droit) */
+#holocron3 {
+    top: 50%;
+    right: 5%;
+    transform: translateX(50%);
+}
+
+
+
+
+
+
+
+
+
+
+/*                        MEDIA QUERIES                     */
+
+/* 🌍 Responsive pour les grands écrans (au-dessus de 1024px) */
+@media (min-width: 1025px) {
+
+    .title h1 {
+        font-size: 10em; /* Titre plus grand sur grands écrans */
+    }
+
+    .title h2 {
+        font-size: 3.5em; /* Sous-titre plus grand */
+    }
+
+    .presentation {
+        margin-left: 20em;
+        margin-right: 20em;
+    }
+
+    .about-me {
+        flex-direction: row; /* Aligne les éléments horizontalement */
+    }
+
+    .about-me-1-2, .about-me-2-2 {
+        width: 48%; /* Divise l'espace en deux colonnes */
+    }
+}
+
+/* 🌍 Responsive pour tablettes et écrans moyens (max 1024px) */
+@media (max-width: 1024px) {
+
+    nav {
+        flex-direction: column; /* Aligne les éléments du nav en colonne */
+        justify-content: center; /* Centre les éléments verticalement */
+        padding: 0.8em; /* Réduit le padding */
+    }
+
+    nav ul {
+        flex-direction: column; /* Les éléments de la liste se positionnent verticalement */
+        align-items: center; /* Centre les éléments */
+    }
+
+    nav ul li {
+        margin: 1em 0; /* Ajoute de l'espace entre les éléments du nav */
+        font-size: 1.4em; /* Réduit la taille de la police */
+    }
+
+    .logo img {
+        width: 4em; /* Réduit la taille du logo */
+        height: 4em;
+        margin-right: 0; /* Enlève l'espace à droite du logo */
+        margin-left: 0; /* Enlève l'espace à gauche du logo */
+    }
+
+    .title h1 {
+        font-size: 6em; /* Réduit la taille du titre */
+    }
+
+    .title h2 {
+        font-size: 2.5em; /* Réduit la taille du sous-titre */
+    }
+
+    .presentation {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    .about-me {
+        flex-direction: column; /* Empile les éléments au lieu de les aligner horizontalement */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .about-me-1-2, .about-me-2-2 {
+        width: 90%; /* Augmente la largeur des colonnes */
+        text-align: center; /* Centre le texte */
+    }
+
+}
+
+/* 📱 Responsive pour mobiles (max 768px) */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column; /* Passe la barre de navigation en colonne */
+        justify-content: center; /* Centrer les éléments */
+        padding: 0.5em; /* Réduire le padding */
+    }
+
+    nav ul li {
+        margin: 1em 0; /* Espacement entre les éléments */
+        font-size: 1.2em; /* Réduit encore la taille du texte */
+    }
+
+    .logo img {
+        width: 3.5em; /* Réduit la taille du logo */
+        height: 3.5em;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .title h1 {
+        font-size: 4.5em; /* Taille du titre pour les petits écrans */
+    }
+
+    .title h2 {
+        font-size: 2em; /* Taille du sous-titre pour les petits écrans */
+    }
+
+    .presentation {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .about-me {
+        flex-direction: column; /* Empile les éléments verticalement */
+        align-items: center;
+    }
+
+    .about-me-1-2, .about-me-2-2 {
+        width: 100%; /* Prend toute la largeur disponible */
+        text-align: center;
+    }
+
+}
+
+/* 📱 Responsive pour petits écrans mobiles (max 480px) */
+@media (max-width: 480px) {
+
+    nav {
+        flex-direction: column; /* Les éléments du nav sont en colonne */
+        justify-content: center; /* Centrer les éléments verticalement */
+        padding: 0.5em; /* Espacement réduit */
+    }
+
+    nav ul li {
+        margin: 1em 0; /* Espacement entre les éléments */
+        font-size: 1.1em; /* Petite taille de police */
+    }
+
+    .logo img {
+        width: 3em; /* Réduit encore plus la taille du logo */
+        height: 3em;
+    }
+
+    .title h1 {
+        font-size: 3.5em; /* Réduit davantage la taille du titre */
+    }
+
+    .title h2 {
+        font-size: 1.8em; /* Réduit davantage la taille du sous-titre */
+    }
+
+    .presentation {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .about-me-1-2, .about-me-2-2 {
+        width: 100%; /* S'assure que chaque section prend toute la largeur */
+        text-align: center;
+        padding: 1em; /* Ajoute plus d'espaces internes */
+    }
+
+}

@@ -1,4 +1,6 @@
 // Lorsque la page est pleinement chargée
+
+/*
 window.addEventListener('load', () => {
     const loadingElement = document.getElementById('loading'); // Conteneur principal (fond noir)
     const introText = document.getElementById('intro-text'); // Texte de chargement
@@ -19,3 +21,5 @@ window.addEventListener('load', () => {
         loadingElement.classList.add('hidden'); // Cache le fond noir
     }, 6000); // 2s (fond) + 3s (H2) + 1s pour disparition texte
 });
+
+*/
