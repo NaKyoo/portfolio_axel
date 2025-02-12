@@ -9,32 +9,37 @@
 <body>
 
 
-
+<!--
 <div id="loading">
     <h2 id="intro-text">
         Il y a bien longtemps dans une galaxie lontaine, très lointaine....
     </h2>
 </div>
 
+-->
+
 <header>
     <nav>
         <li class="logo" >
-            <a href="#">
+            <a href=".">
                 <img src="../portfolio_axel/assets/images/logo_vador.png" alt="logo">
             </a>
         </li>
         <ul class="menu">
             <li>
-                <a href="#" class="profil">Profil</a>
+                <a href="#profil" class="profil">Profil</a>
             </li>
             <li>
-                <a href="#" class="competences">Compétences</a>
-            </li>
-            <li>
-                <a href="#" class="projets">Mes Projets</a>
+                <a href="#projets" class="projets">Mes Projets</a>
             </li>
             <li>
                 <a href="#" class="contact">Contact</a>
+            </li>
+            <li>
+                <button id="theme-toggle">
+                    <p>Light</p>
+                    <p>Dark</p>
+                </button>
             </li>
         </ul>
     </nav>
@@ -49,8 +54,7 @@
             <h2>Développeur Web et FULL STACK</h2>
         </div>
 
-
-        <div class="presentation">
+        <div class="presentation" id="profil">
             <div class = "presentation-box">
                 <h2>A PROPOS DE MOI</h2>
                 <div class = "about-me">
@@ -101,6 +105,90 @@
                         </div>
                         <p class = "collaborate">J'ai collaboré avec eux ! <span>Et si vous rejoigniez cette liste ?</span></p>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="projects" id="projets">
+            <h2>Mes Projets</h2>
+            <div class="project-box">
+                <div class="projects-container">
+
+                    <div class="project-item">
+                        <img src="../portfolio_axel/assets/images/projects/ImpossibleNUNUNU.png" alt="ImpossibleNUNUNU" class="project-image">
+                        <div class="project-info">
+                            <h3>ImpossibleNUNUNU</h3>
+                            <p>Un jeu de plateforme extrêmement difficile, développé en Unity et C#, inspiré du jeu CatMario.
+                                Un véritable défi pour les amateurs de jeux hardcore,
+                                offrant des niveaux complexes et un gameplay exigeant.</p>
+                            <div class="project-button">
+                                <div class=" technology-images">
+                                    <img src="../portfolio_axel/assets/images/logo_unity.png" alt="Unity Logo" class="technology-image">
+                                    <img src="../portfolio_axel/assets/images/c-sharp_logo.png" alt="C# Logo" class="technology-image">
+                                </div>
+                                <a href="https://github.com/NaKyoo/ImpossibleNUNUNU" target="_blank">
+                                    <img src="../portfolio_axel/assets/images/button.png" alt="button" class="button-image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item reverse">
+                        <img src="../portfolio_axel/assets/images/projects/minesweeper.jpg" alt="Minesweeper" class="project-image" id = "minesweeper-img">
+                        <div class="project-info">
+                            <h3>Minesweeper</h3>
+                            <p>Un jeu de démineur développé en Python, où le joueur doit découvrir des cases sans activer de mines.
+                                Avec des niveaux de difficulté ajustables, ce jeu offre un défi de logique et de stratégie pour
+                                les amateurs de réflexion.</p>
+                            <div class="project-button">
+                                <div class=" technology-images">
+                                    <img src="../portfolio_axel/assets/images/python_logo.png" alt="Python Logo" class="technology-image">
+                                </div>
+                                <a href="https://github.com/NaKyoo/project_python_MineSweeper" target="_blank">
+                                    <img src="../portfolio_axel/assets/images/button.png" alt="button" class="button-image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="../portfolio_axel/assets/images/projects/project_memory.png" alt="ImpossibleNUNUNU" class="project-image">
+                        <div class="project-info">
+                            <h3>Project Memory</h3>
+                            <p>Un site interactif avec un système de gestion de comptes et d'accès, permettant aux utilisateurs de créer et
+                                gérer leur profil, accompagné d'un jeu de Memory intégré pour une expérience ludique et engageante.</p>
+                            <div class="project-button">
+                                <div class=" technology-images">
+                                    <img src="../portfolio_axel/assets/images/logo_html.png" alt="HTML logo" class="technology-image">
+                                    <img src="../portfolio_axel/assets/images/logo_js.png" alt="JS logo" class="technology-image" id="js-image">
+                                    <img src="../portfolio_axel/assets/images/logo_sql.png" alt="SQL logo" class="technology-image" id="sql-image">
+                                    <img src="../portfolio_axel/assets/images/logo_php.png" alt="PHP logo" class="technology-image" id="php-image">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item reverse">
+                        <img src="../portfolio_axel/assets/images/projects/destruct-chess.png" alt="Terminal Chess War" class="project-image" id = "destruct-chess-img">
+                        <div class="project-info">
+                            <h3>Terminal Chess War</h3>
+                            <p>Un jeu original pour 2 à 4 joueurs (inventé par moi-même) au style rétro sans interface graphique,
+                                où l'objectif est simple : se déplacer d'une case et détruire une autre. Le premier joueur bloqué
+                                par un mur, des cases ou un autre joueur perd la partie, et le dernier joueur encore capable de se
+                                déplacer remporte la victoire. Un système de temps et de scores ajoute une dimension supplémentaire
+                                au gameplay. Le jeu propose deux modes : le mode normal et le mode accéléré, où le plateau se réduit
+                                après un certain nombre de tours, intensifiant ainsi la stratégie et la pression.</p>
+                            <div class="project-button">
+                                <div class=" technology-images">
+                                    <img src="../portfolio_axel/assets/images/logo_java.png" alt="Java Logo" class="technology-image" id="java-image">
+                                </div>
+                                <a href="https://github.com/NaKyoo/Destruct-Chess-Java" target="_blank">
+                                    <img src="../portfolio_axel/assets/images/button.png" alt="button" class="button-image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
