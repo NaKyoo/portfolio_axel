@@ -159,6 +159,8 @@ main {
 .content {
     position: relative;
     margin-top: 50em;
+    margin-left: 10em;
+    margin-right: 10em;
 }
 
 /*                        STYLE TITLE                      */
