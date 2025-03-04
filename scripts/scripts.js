@@ -23,3 +23,21 @@ window.addEventListener('load', () => {
     }, 6000); // 2s (fond) + 3s (H2) + 1s pour disparition texte
 });
  */
+document.addEventListener('DOMContentLoaded', function() {
+    function ajusterHolocrons() {
+        const holocrons = document.querySelectorAll('.holocron');
+        holocrons.forEach(holocron => {
+            const rect = holocron.getBoundingClientRect();
+            // Vérifie si l'espace à gauche est inférieur à 160px (la largeur du contenu + marge)
+            if (rect.left < 160) {
+                holocron.classList.add('align-right');
+            } else {
+                holocron.classList.remove('align-right');
+            }
+        });
+    }
+
+    // Exécuter lors du chargement et à chaque redimensionnement
+    ajusterHolocrons();
+    window.addEventListener('resize', ajusterHolocrons);
+});
