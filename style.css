@@ -20,9 +20,9 @@ html, body {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center; /* Centre le conteneur principal horizontalement */
-    align-items: center; /* Centre verticalement */
-    overflow: hidden; /* Évite les débordements */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     overflow-y: auto;
     scroll-behavior: smooth;
 
@@ -58,7 +58,7 @@ body {
     transition: opacity 1s ease, visibility 1s ease;
 }
 
-/* Masquer le chargement après la transition */
+
 #loading.hidden {
     opacity: 0;
     visibility: hidden;
@@ -67,17 +67,17 @@ body {
 #intro-text {
     font-family: "Droid Sans", sans-serif;
     font-size: 3.4vw;
-    color: #44eeee; /* Texte blanc */
+    color: #44eeee;
     text-align: center;
-    opacity: 0; /* Initialement invisible */
-    transition: opacity 1s ease; /* Transition fluide pour apparaître et disparaître */
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 #intro-text.visible {
-    opacity: 1; /* Devient visible */
+    opacity: 1;
 }
 
 #intro-text.hidden {
-    opacity: 0; /* Disparaît */
+    opacity: 0;
 }
 /*                        STYLE HEADER                        */
 header {
@@ -88,18 +88,18 @@ header {
     z-index: 100;
     width: 99%;
     display: flex;
-    justify-content: center; /* Centre horizontalement tout le contenu du header */
-    align-items: center; /* Centre verticalement les éléments */
-    padding: 1em 0; /* Espacement interne du header (haut-bas) */
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
 }
 
 nav {
     display: flex;
-    justify-content: flex-end; /* Aligne les éléments du nav à droite */
-    background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent pour laisser transparaître l'arrière-plan */
-    backdrop-filter: blur(10px); /* Applique un flou à l'arrière-plan */
-    border-radius: 40px; /* Coins arrondis pour un effet plus doux */
-    padding: 1em; /* Espacement interne */
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    padding: 1em;
 }
 nav ul {
     display: flex;
@@ -110,7 +110,7 @@ nav ul {
 
 nav ul li {
     margin: 0 2em;
-    font-size: 1.6em;
+    font-size: 1.1em;
     font-family: "Galaxy Outlined Italic", sans-serif;
     color: white;
     filter: brightness(200%);
@@ -126,9 +126,9 @@ nav ul li {
     align-items: center;
 }
 .logo img {
-    width: 5em;
-    height: 5em;
-    margin-right: 25em; /* Ajoute un petit espace entre le logo et le nav */
+    width: 4em;
+    height: 4em;
+    margin-right: 25em;
     margin-left: 4em;
     z-index: 1000;
 }
@@ -152,48 +152,48 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Permet à la section `main` de prendre au moins toute la hauteur de l'écran */
-    box-sizing: border-box; /* Assure une bonne gestion des dimensions */
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .content {
     position: relative;
-    margin-top: 50em;
-    margin-left: 10em;
-    margin-right: 10em;
+    margin-top: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 /*                        STYLE TITLE                      */
 
 .title {
-    position: relative; /* Nécessaire pour que les enfants (h1, h2) en position absolue se basent sur .title */
-    width: 100%; /* S'étend sur toute la largeur */
-    min-height: 60vh; /* Augmenté pour assurer qu'il occupe suffisamment d'espace */
-    display: flex; /* Utilisation de Flexbox pour centrer facilement */
-    flex-direction: column; /* Aligne les enfants verticalement */
-    justify-content: center; /* Centre les enfants verticalement */
-    align-items: center; /* Centre les enfants horizontalement */
-    text-align: center; /* Centre le texte */
-    margin-top: 270em;
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 265em;
 }
 
 
 .title img {
     position: absolute;
-    top: 35%; /* Centre l'image verticalement */
-    left: 50%; /* Centre l'image horizontalement */
-    transform: translate(-50%, -50%); /* Ajuste le point d'origine au centre */
-    z-index: -1; /* Place l'image derrière le texte */
-    width: 40em;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 20%;
     height: auto;
 
 }
 
 .title h1 {
-    font-size: 10em; /* Grand titre */
+    font-size: 6em;
     color: var(--primary-color);
     font-family: "Galaxy Outlined Italic", sans-serif;
-    white-space: nowrap; /* Empêche le changement de ligne */
+    white-space: nowrap;
     margin: 0;
     margin-top: 1.5em;
     filter: brightness(150%);
@@ -201,10 +201,10 @@ main {
 }
 
 .title h2 {
-    font-size: 3.5em; /* Sous-titre plus petit */
+    font-size: 3em;
     color: var(--primary-color);
     font-family: "Starjhol", sans-serif;
-    white-space: nowrap; /* Empêche le changement de ligne */
+    white-space: nowrap;
     margin: 0;
     filter: brightness(150%);
 }
@@ -214,19 +214,19 @@ main {
     color: white;
     font-weight: bold;
     filter: brightness(150%);
-    font-family: 'Galaxy Outlined Italic', sans-serif; /* Police qui rappelle l'univers Star Wars */
-    font-size: 1.5em; /* Taille de texte un peu plus grande */
+    font-family: 'Galaxy Outlined Italic', sans-serif;
+    font-size: 1.3em;
     padding: 1em;
-    border: 3px solid white; /* Bordure claire */
-    border-radius: 15px; /* Coins légèrement arrondis */
-    text-transform: uppercase; /* Met en majuscules le texte */
-    letter-spacing: 2px; /* Espacement des lettres pour donner un style un peu plus épuré */
-    cursor: pointer; /* Curseur en forme de main pour montrer qu'il est cliquable */
-    transition: all 0.3s ease-in-out; /* Transition fluide */
+    border: 3px solid white;
+    border-radius: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
     margin-top: 4em;
     justify-content: center;
     align-items: center;
-    animation: neonAnimation 3s linear infinite; /* L'animation de halo néon qui tourne */
+    animation: neonAnimation 3s linear infinite;
 }
 
 @keyframes neonAnimation {
@@ -266,10 +266,10 @@ main {
 }
 
 .title button:hover {
-    background-color: transparent; /* Fond transparent pour mettre en valeur l'effet néon */
-    color: var(--primary-color); /* Maintient la couleur du texte */
+    background-color: transparent;
+    color: var(--primary-color);
     border-color: var(--primary-color);
-    transform: scale(1.1); /* Agrandit légèrement le bouton */
+    transform: scale(1.1);
     animation: neonAnimationHover 3s linear infinite;
 
 
@@ -281,13 +281,13 @@ main {
 
 .presentation {
     position: relative;
-    display: flex; /* Utilisation de Flexbox pour un alignement vertical */
-    flex-direction: column; /* Aligne les éléments verticalement */
-    justify-content: center; /* Centre verticalement */
-    align-items: center; /* Centre horizontalement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     top: 45em;
-    min-height: 60vh; /* Assure que la section prend assez de place */
+    min-height: 60vh;
     margin-left : 20em;
     margin-right: 20em;
 
@@ -302,15 +302,15 @@ main {
 
 
 .presentation h2 {
-    font-size: 3.5em; /* Sous-titre plus petit */
+    font-size: 3em;
     color: var(--primary-color);
     font-family: "Galaxy Outlined Italic", sans-serif;
-    white-space: nowrap; /* Empêche le changement de ligne */
+    white-space: nowrap;
     margin: 0;
     filter: brightness(150%);
-    border: 3px solid var(--primary-color); /* Bordure autour de la boîte */
-    border-radius: 15px; /* Coins arrondis */
-    padding: 0.5em; /* Espacement interne */
+    border: 3px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 0.5em;
 }
 
 /*                        ABOUT ME                    */
@@ -318,13 +318,13 @@ main {
 
 .about-me {
     display: flex;
-    justify-content: space-between; /* Espacement entre les deux colonnes */
-    width: 100%; /* Pour s'assurer que ça prend toute la largeur disponible */
-    margin-top: 2em; /* Un petit espace au-dessus des colonnes */
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2em;
 }
 
 .about-me h3 {
-    font-size: 1.6em;
+    font-size: 1.3em;
 }
 .about-me p {
     font-size : 0.9em;
@@ -332,18 +332,18 @@ main {
 }
 
 .about-me-1-2, .about-me-2-2 {
-    width: 48%; /* Chaque partie prend 48% de la largeur, laissant un petit espace entre elles */
+    width: 48%;
 
-    box-sizing: border-box; /* Prise en compte du padding dans la largeur */
+    box-sizing: border-box;
 }
 
 .about-me-1-2 {
-    margin-right: 2%; /* Un petit espace entre les deux colonnes */
+    margin-right: 2%;
     font-family: "Arial", sans-serif;
     font-size: 1.5em;
     text-align: left;
     padding: 0.8em;
-    gap: 20px; /* Espacement entre l'image et le texte */
+    gap: 20px;
 }
 
 .about-me-2-2 {
@@ -367,22 +367,21 @@ span {
 
 /*                        HOLOCRON COMPETENCES                     */
 
-/* Conteneur des Holocrons */
 .holocron-container {
     position: relative;
-    width: 50%; /* Largeur du conteneur, ajustable */
+    width: 50%;
     height: 50vh;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Organise les holocrons en colonne */
+    flex-direction: column;
 }
 
 .holocron {
     position: absolute;
-    width: 8vw;  /* Réduire la taille */
-    height: 8vw;  /* Réduire la taille */
+    width: 8vw;
+    height: 8vw;
     background-image: url('../portfolio_axel/assets/images/holocron.png');
     background-size: cover;
     background-position: center;
@@ -393,49 +392,46 @@ span {
     cursor: pointer;
     opacity: 0.8;
     transition: all 0.3s ease-in-out;
+    z-index: 2;
 }
 
-/* Au survol, on agrandit légèrement le Holocron */
 .holocron:hover {
     opacity: 1.5;
     transform: scale(1.2);
 }
 
 
-/* Contenu des Holocrons (les textes) */
 .holocron-content {
     color: white;
     font-family: 'Arial', sans-serif;
     text-align: center;
-    display: none; /* Masquer le contenu au départ */
+    display: none;
     position: absolute;
     top: 50%;
     right: 100%;
-    transform: translateX(-10px) translateY(-50%); /* Positionne le texte à gauche du carré */
-    width: 220px;
-    background-color: #000; /* Fond noir */
-    padding: 15px;
+    transform: translateX(-10px) translateY(-50%);
+    width: 200px;
+    background-color: #000;
     border-radius: 15px;
-    border: 3px solid #f1c40f; /* Bordure jaune pour donner l'effet Star Wars */
-    box-shadow: 0px 0px 15px #f1c40f; /* Ombre lumineuse */
-    font-size: 1.1em;
+    border: 3px solid #f1c40f;
+    box-shadow: 0px 0px 15px #f1c40f;
+    font-size: 0.8em;
     letter-spacing: 1.5px;
     transform-origin: center center;
-    z-index: 2; /* Assure que la box est au-dessus du carré */
+    z-index: 2;
     transition: transform 0.3s ease;
     padding: 2em;
 }
 .holocron:hover .holocron-content {
-    display: block; /* Afficher le contenu lorsque le holocron est survolé */
-    transform: translateX(-10px) translateY(-50%) scale(1.05); /* Animation lors du survol */
+    display: block;
+    transform: translateX(-10px) translateY(-50%) scale(1.05);
 }
 
-/* Styles des titres et textes dans les Holocrons */
 .holocron h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-family: 'Galaxy Outlined Italic', sans-serif;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px #f1c40f; /* Ombre sur le texte pour un effet lumineux */
+    text-shadow: 2px 2px 4px #f1c40f;
     text-align: center;
 }
 
@@ -447,23 +443,18 @@ span {
     color : var(--primary-color);
 }
 
-/* Positionner les Holocrons en forme de triangle */
-
-/* Holocron 1 (Sommet du triangle) */
 #holocron1 {
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* Holocron 2 (Bas gauche) */
 #holocron2 {
     top: 50%;
     left: 5%;
     transform: translateX(-50%);
 }
 
-/* Holocron 3 (Bas droit) */
 #holocron3 {
     top: 50%;
     right: 5%;
@@ -475,13 +466,13 @@ span {
 
 .projects {
     position: relative;
-    display: flex; /* Utilisation de Flexbox pour un alignement vertical */
-    flex-direction: column; /* Aligne les éléments verticalement */
-    justify-content: center; /* Centre verticalement */
-    align-items: center; /* Centre horizontalement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     top: 80em;
-    min-height: 60vh; /* Assure que la section prend assez de place */
+    min-height: 60vh;
     margin-left : 20em;
     margin-right: 20em;
 
@@ -492,19 +483,20 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 
 .projects h2 {
-    font-size: 3.5em; /* Sous-titre plus petit */
+    font-size: 3em;
     color: var(--primary-color);
     font-family: "Galaxy Outlined Italic", sans-serif;
-    white-space: nowrap; /* Empêche le changement de ligne */
+    white-space: nowrap;
     margin: 0;
     filter: brightness(150%);
-    border: 3px solid var(--primary-color); /* Bordure autour de la boîte */
-    border-radius: 15px; /* Coins arrondis */
-    padding: 0.5em; /* Espacement interne */
+    border: 3px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 0.5em;
 }
 
 .projects-container {
@@ -513,22 +505,27 @@ span {
     gap: 2.5rem;
     margin-top: 8rem;
 }
+
 .project-item {
     display: flex;
     align-items: center;
-    gap: 5rem;
-    margin-bottom: 5rem;
+    justify-content: center;
+    gap: 2em;
+    height: auto;
     object-fit: cover;
+    margin: 0 15% 5rem 15%;
 
 }
 .project-item.reverse {
     display: flex;
+    align-items: center;
     flex-direction: row-reverse;
-    align-items: flex-start;
-    margin-bottom: 5rem;
+    gap: 5em;
+    object-fit: cover;
+    margin: 0 20% 5rem 20%;
 }
 .project-image {
-    width: 900px;
+    width: 600px;
     height: auto;
     border-radius: 0.625rem;
     transition: all 0.3s ease-in-out;
@@ -546,7 +543,7 @@ span {
 }
 
 .project-info h3 {
-    font-size: 3.5em;
+    font-size: 2.5em;
     color: var(--primary-color);
     font-family: "Galaxy Outlined Italic", sans-serif;
     white-space: nowrap;
@@ -556,7 +553,7 @@ span {
 }
 
 .project-info p {
-    font-size: 1.6em;
+    font-size: 1.2em;
     line-height: 1.5em;
     text-align: left;
     color: #b6b6b3;
@@ -578,36 +575,32 @@ span {
 }
 
 .technology-image {
-    width: 4em;
-    height: 4em;
+    width: 3em;
+    height: 3em;
     align-self: center;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out; /* Animation fluide */
+    transition: transform 0.3s ease-in-out;
 }
 
 .technology-image:hover {
-    transform: translateY(-5px) scale(1.1); /* Se lève et grandit légèrement */
+    transform: translateY(-5px) scale(1.1);
 }
 
 .button-image {
-    width: 3em;
-    height: 3em;
-    transition: transform 0.3s ease-in-out; /* Animation fluide */
+    width: 2em;
+    height: 2em;
+    transition: transform 0.3s ease-in-out;
 }
 .button-image:hover {
-    transform: translateY(-5px) scale(1.1); /* Se lève et grandit légèrement */
+    transform: translateY(-5px) scale(1.1);
 }
 
-#minesweeper-img {
-    width: 900px;
-    height: 500px;
-}
 
 #js-image {
-    width: 3em;
-    height: 3em;
+    width: 2.5em;
+    height: 2.5em;
     align-self: flex-start;
-    padding-top: 0.5em;
+    padding-top: 1em;
 }
 
 #sql-image {
@@ -621,14 +614,11 @@ span {
     object-fit: contain;
 }
 
-#destruct-chess-img {
-    width: 1000px;
-    height: 650px;
-}
+
 
 #java-image {
-    width: 5em;
-    height: 5em;
+    width: 4em;
+    height: 4em;
 }
 
 
@@ -648,7 +638,7 @@ span {
 }
 
 .contact-section h2 {
-    font-size: 3.5em;
+    font-size: 3em;
     color: var(--primary-color);
     font-family: "Galaxy Outlined Italic", sans-serif;
     white-space: nowrap;
@@ -661,7 +651,7 @@ span {
 .contact-info {
     display: flex;
     flex-direction: row;
-    gap: 2em; /* Espace entre les colonnes */
+    gap: 2em;
     justify-content: center;
 
     align-self: center;
@@ -679,7 +669,7 @@ span {
 }
 
 .contact-info .image-container p {
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1.5em;
     font-family: "Blorado", sans-serif;
 }
@@ -687,14 +677,15 @@ span {
 .contact-info .image-container a {
     text-decoration: none;
     color: white;
-    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out; /* Ajout de la transition pour le texte */
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
 
 }
 .contact-info .image-container a:hover {
-    color: var(--primary-color);  /* Garde l'effet de changement de couleur */
-    filter: brightness(150%);  /* Garde l'effet de brillance */
-    transform: translateY(-5px); /* Légère élévation */
-    font-size: 1.05em; /* Agrandir le texte */
+    filter: brightness(150%);
+    transform: translateY(-5px);
+}
+.contact-info .mail:hover {
+    color: var(--primary-color);
 }
 .contact-info span {
     font-family: "Galaxy Outlined Italic", sans-serif;
@@ -704,10 +695,12 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1em;
+    margin-bottom: 1em;
 }
 
 .contact-info .image-below img {
-    width: 6em;
+    width: 5em;
     object-fit: contain;
 }
 
@@ -716,25 +709,25 @@ span {
     color: var(--primary-color);
     font-weight: bold;
     filter: brightness(150%);
-    font-family: 'Galaxy Outlined Italic', sans-serif; /* Police qui rappelle l'univers Star Wars */
-    font-size: 1.5em; /* Taille de texte un peu plus grande */
+    font-family: 'Galaxy Outlined Italic', sans-serif;
+    font-size: 1.5em;
     padding: 1em;
-    border: 3px solid var(--primary-color); /* Bordure claire */
-    border-radius: 5px; /* Coins légèrement arrondis */
-    text-transform: uppercase; /* Met en majuscules le texte */
-    letter-spacing: 2px; /* Espacement des lettres pour donner un style un peu plus épuré */
-    cursor: pointer; /* Curseur en forme de main pour montrer qu'il est cliquable */
-    transition: all 0.3s ease-in-out; /* Transition fluide */
+    border: 3px solid var(--primary-color);
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
     top: 4em;
     justify-content: center;
     align-items: center;
 }
 
 .contact-info .image-container button:hover {
-    background-color: #6c600a; /* Fond clair quand on survole */
-    color: #111; /* Texte foncé quand on survole */
+    background-color: #6c600a;
+    color: #111;
     transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3); /* Ombre portée pour un effet de profondeur */
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
 
@@ -743,53 +736,48 @@ span {
 
 /*                        FOOTER                            */
 
-
-/* Style général du footer */
 .starwars-footer {
     display: flex;
-    justify-content: space-between; /* Espace entre gauche et droite */
+    justify-content: space-between;
     align-items: center;
-    padding: 1em 2em; /* Espacement du footer */
-    font-family: 'Starjedi', sans-serif; /* Police futuriste */
-    position: relative; /* Position normale (pas fixe) */
-    bottom: 0; /* S'assure qu'il est en bas de la page */
-    width: 100%; /* Occupe toute la largeur disponible */
-    margin-top: 10em; /* Pousse le footer en bas si la page a beaucoup de contenu */
-    border-top: 3px solid #f1c40f; /* Bordure dorée */
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    padding: 1em 2em;
+    font-family: 'Starjedi', sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10em;
+    border-top: 3px solid #f1c40f;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     color: white;
     filter: brightness(150%);
 
 }
 
-/* Partie gauche du footer */
 .footer-left p {
-    font-size: 1.2em; /* Taille du texte du copyright */
+    font-size: 1em;
     font-weight: 400;
 }
 
-/* Partie droite (réseaux sociaux) */
 .footer-right {
     display: flex;
-    gap: 1.5em; /* Espacement entre les icônes */
+    gap: 1.5em;
 }
 
 /* Icônes des réseaux sociaux */
 .social-icon {
-    color: #ffffff; /* Couleur dorée pour les icônes */
-    font-size: 1.8em; /* Taille des icônes */
+    color: #ffffff;
+    font-size: 1.8em;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-    transition: transform 0.3s ease-in-out; /* Animation fluide */
-    transform: translateY(-5px) scale(1.1); /* Se lève et grandit légèrement */
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-5px) scale(1.1);
 }
 
-/* Icônes spécifiques (si tu utilises Font Awesome) */
 .fab {
-    font-size: 2em; /* Ajuste la taille des icônes */
+    font-size: 1.5em;
 }
 
 
@@ -816,7 +804,7 @@ span {
 
     /* SECTION TITLE */
     .title {
-        margin-top: 470vh; /* Utilisation d'une unité relative à la hauteur de la vue */
+        margin-top: 470vh;
         min-height: auto;
     }
     .title h1 {
@@ -925,7 +913,6 @@ span {
     .project-item {
         flex-direction: row;
         gap: 2em;
-        width: 80%;
         height: auto;
         align-items: center;
         justify-content: center;
