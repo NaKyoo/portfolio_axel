@@ -1,34 +1,26 @@
-// Lorsque la page est pleinement chargée
-
-/*
-
 window.addEventListener('load', () => {
-    const loadingElement = document.getElementById('loading'); // Conteneur principal (fond noir)
-    const introText = document.getElementById('intro-text'); // Texte de chargement
+    const loadingElement = document.getElementById('loading');
+    const introText = document.getElementById('intro-text');
 
-    // Étape 1 : Afficher uniquement le fond noir pendant 2 secondes
     setTimeout(() => {
-        introText.classList.add('visible'); // Montre le texte (H2) après 2 secondes
+        introText.classList.add('visible');
     }, 1000);
 
-    // Étape 2 : Garder le H2 affiché pendant 3 secondes
     setTimeout(() => {
-        introText.classList.remove('visible'); // Cache le texte
-        introText.classList.add('hidden'); // Application d'une transition de disparition
-    }, 5000); // 2s (fond) + 3s (H2)
+        introText.classList.remove('visible');
+        introText.classList.add('hidden');
+    }, 5000);
 
-    // Étape 3 : Masquer le fond noir après disparition du H2
     setTimeout(() => {
-        loadingElement.classList.add('hidden'); // Cache le fond noir
-    }, 6000); // 2s (fond) + 3s (H2) + 1s pour disparition texte
+        loadingElement.classList.add('hidden');
+    }, 6000);
 });
- */
+
 document.addEventListener('DOMContentLoaded', function() {
     function ajusterHolocrons() {
         const holocrons = document.querySelectorAll('.holocron');
         holocrons.forEach(holocron => {
             const rect = holocron.getBoundingClientRect();
-            // Vérifie si l'espace à gauche est inférieur à 160px (la largeur du contenu + marge)
             if (rect.left < 160) {
                 holocron.classList.add('align-right');
             } else {
@@ -37,7 +29,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Exécuter lors du chargement et à chaque redimensionnement
     ajusterHolocrons();
     window.addEventListener('resize', ajusterHolocrons);
 });
+
+function toggleMenu() {
+    var logo = document.querySelector('.logo');
+    var menu = document.querySelector('.menu');
+    logo.classList.toggle('active');
+    menu.classList.toggle('active');
+}
+
+

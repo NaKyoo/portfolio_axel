@@ -15,16 +15,13 @@
     src: url('../portfolio_axel/assets/fonts/SF Distant Galaxy Outline Italic.ttf') format("truetype");
 }
 html, body {
+
+    scroll-behavior: smooth;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    overflow-y: auto;
-    scroll-behavior: smooth;
 
 }
 
@@ -151,16 +148,8 @@ nav ul li {
 main {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     box-sizing: border-box;
-}
-
-.content {
-    position: relative;
-    margin-top: 25%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 100%;
 }
 
 /*                        STYLE TITLE                      */
@@ -174,7 +163,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 265em;
+    margin-top: 12em;
 }
 
 
@@ -333,8 +322,6 @@ main {
 
 .about-me-1-2, .about-me-2-2 {
     width: 48%;
-
-    box-sizing: border-box;
 }
 
 .about-me-1-2 {
@@ -633,8 +620,8 @@ span {
     text-align: center;
     top: 100em;
     min-height: 60vh;
-    margin-left: 20em;
-    margin-right: 20em;
+
+
 }
 
 .contact-section h2 {
@@ -740,17 +727,18 @@ span {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     padding: 1em 2em;
     font-family: 'Starjedi', sans-serif;
     position: relative;
+    top: 100em;
     bottom: 0;
-    width: 100%;
-    margin-top: 10em;
+    width: 80%;
+    margin: 10em auto;
     border-top: 3px solid #f1c40f;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     color: white;
     filter: brightness(150%);
-
 }
 
 .footer-left p {
@@ -763,7 +751,6 @@ span {
     gap: 1.5em;
 }
 
-/* Icônes des réseaux sociaux */
 .social-icon {
     color: #ffffff;
     font-size: 1.8em;
@@ -786,8 +773,9 @@ span {
 
 /*                        MEDIA QUERIES                     */
 
-/* =================== Responsive Tablettes (max-width: 1024px) =================== */
 @media (max-width: 1260px) {
+
+
     /* HEADER & NAVIGATION */
     header {
         padding: 0.5em 0;
@@ -803,10 +791,7 @@ span {
     }
 
     /* SECTION TITLE */
-    .title {
-        margin-top: 470vh;
-        min-height: auto;
-    }
+
     .title h1 {
         font-size: 4em;
     }
@@ -822,18 +807,13 @@ span {
         padding: 0.8em;
     }
 
-    /* MAIN & CONTENT */
-    main, .content {
-        margin: 1em 2em;
-    }
-
     /* SECTION PRÉSENTATION */
     .presentation {
-        top: 20vh;
+        top: 30vh;
         margin: 0 2em;
     }
     .presentation h2 {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     /* SECTION ABOUT ME */
@@ -847,10 +827,10 @@ span {
         margin: 1em 0;
     }
     .about-me h3 {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
     .about-me p {
-        font-size: 1.2em;
+        font-size: 0.9em;
     }
 
     .collaborate {
@@ -890,10 +870,6 @@ span {
         gap: 2em;
         margin-top: 2em;
     }
-    .project-item {
-        flex-direction: column;
-        gap: 2em;
-    }
     .project-image {
         width: 100%;
         max-width: 500px;
@@ -916,7 +892,16 @@ span {
         height: auto;
         align-items: center;
         justify-content: center;
-        margin-left: 7em;
+        margin: 0;
+    }
+
+    .project-item.reverse {
+        flex-direction: row-reverse;
+        gap: 2em;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
     }
 
 
@@ -947,23 +932,95 @@ span {
 
     /* FOOTER */
     .starwars-footer {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
         gap: 1em;
         padding: 1em;
         text-align: center;
+        top: 15em;
     }
 }
 
-/* =================== Responsive Téléphones (max-width: 600px) =================== */
-@media (max-width: 600px) {
+@media (max-width: 1070px) {
+
+    .project-item {
+        flex-direction: column;
+        gap: 2em;
+        margin-bottom: 5em;
+    }
+
+    .project-item.reverse {
+        flex-direction: column;
+        gap: 2em;
+        margin-bottom: 5em;
+    }
+
+    .project-item img {
+        max-width: 700px;
+    }
+
+    .project-item.reverse img {
+        max-width: 700px;
+
+    }
+
+    .project-item .project-info {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .project-item.reverse .project-info {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .projects-container {
+        margin-bottom: 10em;
+    }
+
+
+}
+
+/* =================== Responsive Téléphones (max-width: 660px) =================== */
+@media (max-width: 660px) {
+    /* MENU DEROULANT */
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2em;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .logo.active + .menu {
+        display: flex;
+        padding: 0;
+    }
+
     /* HEADER & NAVIGATION */
     header {
         padding: 0.3em 0;
     }
+
     nav ul li {
-        margin: 0 0.5em;
         font-size: 1em;
+        margin-bottom: 1em;
+
     }
     .logo img {
         width: 3em;
@@ -990,18 +1047,18 @@ span {
         padding: 0.6em;
     }
 
-    /* MAIN & CONTENT */
-    main, .content {
+    /* CONTENT */
+    .content {
         margin: 1em;
     }
 
     /* SECTION PRÉSENTATION */
     .presentation {
-        top: 15vh;
+        top: 40vh;
         margin: 0 1em;
     }
     .presentation h2 {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     /* SECTION ABOUT ME */
@@ -1009,22 +1066,23 @@ span {
     .about-me-2-2 {
         width: 100%;
         margin: 1em 0;
+        padding: 0 3em 0 3em;
     }
     .about-me h3 {
-        font-size: 1.2em;
+        font-size: 0.9em;
     }
     .about-me p {
-        font-size: 1em;
+        font-size: 0.6em;
     }
 
     /* HOLOCRON COMPÉTENCES */
     .holocron-container {
-        width: 95%;
+        width: 60%;
         margin: 1em auto;
     }
     .holocron {
-        width: 20vw;
-        height: 20vw;
+        width: 15vw;
+        height: 15vw;
     }
     .holocron-content {
         width: 120px;
@@ -1033,11 +1091,11 @@ span {
 
     /* SECTION PROJETS */
     .projects {
-        top: 25vh;
-        margin: 1em;
+        top: 60vh;
     }
     .projects h2 {
-        font-size: 2em;
+        font-size: 1.5em;
+        margin: 2.5em;
     }
     .projects-container {
         gap: 1em;
@@ -1046,6 +1104,16 @@ span {
     .project-item {
         flex-direction: column;
         gap: 1em;
+        margin: 0;
+        padding-bottom: 5em;
+    }
+
+    .project-item.reverse {
+        flex-direction: column;
+        gap: 1em;
+        margin: 0;
+        padding-bottom: 5em;
+
     }
     .project-image {
         width: 100%;
@@ -1059,11 +1127,11 @@ span {
 
     /* SECTION CONTACT */
     .contact-section {
-        top: 25vh;
+        top: 55vh;
         margin: 1em;
     }
     .contact-section h2 {
-        font-size: 2em;
+        font-size: 1.5em;
     }
     .contact-info {
         flex-direction: column;
@@ -1078,5 +1146,116 @@ span {
         flex-direction: column;
         gap: 0.5em;
         padding: 0.5em;
+        margin-top: 40vh;
+    }
+
+    .footer-left p {
+        font-size: 1em;
+        font-weight: 400;
+    }
+
+    .fab {
+        font-size: 1.2em;
     }
 }
+
+@media (max-width: 500px) {
+
+
+
+    /* SECTION TITLE */
+    .title {
+        margin-top: 15vh;
+    }
+    .title h1 {
+        font-size: 2em;
+    }
+    .title h2 {
+        font-size: 0.8em;
+    }
+    .title button {
+        font-size: 0.8em;
+        padding: 0.6em;
+    }
+
+
+    /* PROFILE */
+
+    .presentation h2 {
+        font-size: 1.2em;
+    }
+
+
+    /* SECTION ABOUT ME */
+
+    .about-me {
+        width: 70%;
+    }
+
+    .about-me h3 {
+        font-size: 0.7em;
+    }
+    .about-me p {
+        font-size: 0.5em;
+    }
+
+    /* HOLOCRON COMPÉTENCES */
+    .holocron-content {
+        width: 120px;
+        font-size: 0.8em;
+    }
+    .collaborate {
+        padding: 3em;
+    }
+
+    /* PROJETS */
+
+    .project-image {
+        width: 100%;
+    }
+
+    .projects h2 {
+        font-size: 1.2em;
+    }
+
+    .project-info h3 {
+        font-size: 1em;
+    }
+
+    /* SECTION CONTACT */
+
+    .contact-section h2 {
+        font-size: 1.2em;
+    }
+    .contact-info {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .contact-info .image-container img {
+        max-width: 150px;
+    }
+
+    .contact-info .image-container p {
+        font-size: 1.2em;
+    }
+
+    .contact-info .image-container button {
+        font-size: 1em;
+    }
+
+    /* FOOTER */
+    .starwars-footer {
+        gap: 0;
+        padding: 0;
+    }
+
+    .footer-left p {
+        font-size: 0.9em;
+        font-weight: 400;
+    }
+
+    .fab {
+        font-size: 1em;
+    }
+}
+
