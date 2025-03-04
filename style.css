@@ -434,18 +434,23 @@ span {
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 999;
 }
 
 #holocron2 {
     top: 50%;
     left: 5%;
     transform: translateX(-50%);
+    z-index: 999;
+
 }
 
 #holocron3 {
     top: 50%;
     right: 5%;
     transform: translateX(50%);
+    z-index: 999;
+
 }
 
 
@@ -1258,4 +1263,3 @@ span {
         font-size: 1em;
     }
 }
-
