@@ -35,6 +35,14 @@ html, body {
 body {
     background-image: url('../portfolio_axel/assets/images/background.jpg');
     color: #ffffff;
+
+}
+
+/* SCROLL BAR */
+
+* {
+    scrollbar-color: #e6cc08 transparent;
+    scrollbar-width: thin;
 }
 
 
