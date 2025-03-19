@@ -22,10 +22,9 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         loadingElement.classList.add('hidden');
 
-        document.documentElement.style.overflow = 'auto';
+        document.body.style.overflow = 'auto';
     }, 6000);
 });
-
 
 
 // Ajuster les holocrons
@@ -60,9 +59,8 @@ function toggleMenu() {
 // SCROLL TO TOP BUTTON
 document.addEventListener("DOMContentLoaded", () => {
     const backToTopButton = document.querySelector('.back-to-top');
-    console.log("Scroll détecté, position :", window.scrollY);
+
     window.addEventListener('scroll', () => {
-        console.log(window.scrollY);
         if (window.scrollY > 2000) {
             backToTopButton.style.visibility = 'visible';
             backToTopButton.style.opacity = 1;
@@ -83,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
 
 
 

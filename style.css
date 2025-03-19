@@ -19,10 +19,10 @@ html, body {
     scroll-behavior: smooth;
     scrollbar-color: #e6cc08 black;
     scrollbar-width: thin;
-
     margin: 0;
     padding: 0;
     height: 100%;
+
 }
 
 
@@ -33,9 +33,6 @@ html, body {
     --fourth-color: #b30707;
 }
 
-html {
-    overflow-y:hidden;
-}
 
 body {
     background-image: url('../portfolio_axel/assets/images/background.jpg');
@@ -43,6 +40,8 @@ body {
     min-height: 100dvh;
     height: 100dvh;
     background-color: black;
+    overflow:hidden;
+
 
 }
 
@@ -741,7 +740,6 @@ span {
     border: none;
     border-radius: 50%;
     width: 50px;
-
     height: 50px;
     font-size: 24px;
     display: flex;
@@ -751,7 +749,7 @@ span {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
-    z-index: 10000;
+    z-index: 9999;
 }
 .back-to-top:hover {
     background-color: #8a7009;
