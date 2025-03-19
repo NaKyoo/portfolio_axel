@@ -1,10 +1,10 @@
-// retour en haut quand la page se load
+// Retour en haut quand la page se load
 
 window.addEventListener('load', () => {
     window.scrollTo(0, 0);
 });
 
-
+// Loading screen
 window.addEventListener('load', () => {
     const loadingElement = document.getElementById('loading');
     const introText = document.getElementById('intro-text');
@@ -25,6 +25,7 @@ window.addEventListener('load', () => {
     }, 6000);
 });
 
+// Ajuster les holocrons
 
 document.addEventListener('DOMContentLoaded', function() {
     function ajusterHolocrons() {
@@ -44,28 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Nav pour mobile
 function toggleMenu() {
     var logo = document.querySelector('.logo');
     var menu = document.querySelector('.menu');
     logo.classList.toggle('active');
     menu.classList.toggle('active');
 }
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute('href'));
-
-
-        setTimeout(() => {
-            window.scrollTo({
-                top: target.offsetTop - 50,
-                behavior: 'smooth'
-            });
-        }, 100);
-    });
-});
 
 
 // SCROLL TO TOP BUTTON
