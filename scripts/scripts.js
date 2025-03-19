@@ -40,19 +40,37 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
+// SCROLL
+function smoothScrollTo(targetY, duration) {
+    const startY = window.pageYOffset;
+    const diff = targetY - startY;
+    let start;
+
+    window.requestAnimationFrame(function step(timestamp) {
+        if (!start) start = timestamp;
+        const time = timestamp - start;
+        const percent = Math.min(time / duration, 1);
+        const easeInOutQuad = percent < 0.5
+            ? 2 * percent * percent
+            : -1 + (4 - 2 * percent) * percent;
+        window.scrollTo(0, startY + diff * easeInOutQuad);
+        if (time < duration) {
+            window.requestAnimationFrame(step);
+        }
+    });
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
 
         const target = document.querySelector(this.getAttribute('href'));
-
-
-        setTimeout(() => {
-            window.scrollTo({
-                top: target.offsetTop - 50,
-                behavior: 'smooth'
-            });
-        }, 400);
+        if (target) {
+            setTimeout(() => {
+                const targetY = target.offsetTop - 50;
+                smoothScrollTo(targetY, 600);
+            }, 400);
+        }
     });
 });
 
