@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
 });
 
 // Loading screen
-/*
+
 window.addEventListener('load', () => {
     const loadingElement = document.getElementById('loading');
     const introText = document.getElementById('intro-text');
@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
         document.documentElement.style.overflow = 'auto';
     }, 6000);
 });
-*/
+
 
 
 // Ajuster les holocrons
