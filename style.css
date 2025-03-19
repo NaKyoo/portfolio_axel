@@ -22,6 +22,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
 
 }
 
@@ -137,6 +138,7 @@ nav ul li {
     margin-right: 25em;
     margin-left: 4em;
     z-index: 1000;
+    cursor: pointer;
 }
 /*                        DARK MODE / LIGHT MODE                     */
 

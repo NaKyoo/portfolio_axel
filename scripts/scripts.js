@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         loadingElement.classList.add('hidden');
 
-        document.body.style.overflow = 'auto';
+        document.body.style.overflowY = 'auto';
     }, 6000);
 });
 
