@@ -18,20 +18,16 @@ html, body {
 
     scroll-behavior: smooth;
     overflow-x: hidden;
-    overflow-y: hidden;
 
     scrollbar-color: #e6cc08 black;
     scrollbar-width: thin;
 
     margin: 0;
     padding: 0;
-    width: 100%;
+    height: 100%;
+
 }
 
-body {
-    min-height: 100%;
-    overflow-y: hidden;
-}
 
 :root {
     --primary-color: #f1c40f;
@@ -43,7 +39,7 @@ body {
 body {
     background-image: url('../portfolio_axel/assets/images/background.jpg');
     color: #ffffff;
-
+    height: 100dvh;
 }
 
 
