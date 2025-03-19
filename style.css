@@ -16,7 +16,7 @@
 }
 html, body {
 
-    scroll-behavior: unset;
+    scroll-behavior: smooth;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
