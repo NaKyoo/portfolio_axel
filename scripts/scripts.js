@@ -53,22 +53,10 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
-// Ancre pour mobile
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
 
 // SCROLL TO TOP BUTTON
 document.addEventListener("DOMContentLoaded", () => {
 
-    // SCROLL TO TOP BUTTON
     const backToTopButton = document.querySelector('.back-to-top');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 2000) {
