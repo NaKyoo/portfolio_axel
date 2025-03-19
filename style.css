@@ -387,7 +387,7 @@ span {
     cursor: pointer;
     opacity: 0.8;
     transition: all 0.3s ease-in-out;
-    z-index: 2;
+    z-index: 1;
 }
 
 .holocron:hover {
@@ -413,13 +413,15 @@ span {
     font-size: 0.8em;
     letter-spacing: 1.5px;
     transform-origin: center center;
-    z-index: 2;
     transition: transform 0.3s ease;
     padding: 2em;
 }
 .holocron:hover .holocron-content {
     display: block;
     transform: translateX(-10px) translateY(-50%) scale(1.05);
+}
+.holocron:hover {
+    z-index: 1000;
 }
 
 .holocron h3 {
@@ -442,23 +444,18 @@ span {
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 999;
 }
 
 #holocron2 {
     top: 50%;
     left: 5%;
     transform: translateX(-50%);
-    z-index: 999;
-
 }
 
 #holocron3 {
     top: 50%;
     right: 5%;
     transform: translateX(50%);
-    z-index: 999;
-
 }
 
 
@@ -1100,6 +1097,7 @@ span {
     .holocron-content {
         width: 120px;
         font-size: 0.8em;
+
     }
 
     /* SECTION PROJETS */
@@ -1216,6 +1214,7 @@ span {
     .holocron-content {
         width: 120px;
         font-size: 0.8em;
+
     }
     .collaborate {
         padding: 3em;
