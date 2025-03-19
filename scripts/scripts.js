@@ -53,6 +53,17 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
+// Ancre pour mobile
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
 
 // SCROLL TO TOP BUTTON
 document.addEventListener("DOMContentLoaded", () => {
