@@ -39,6 +39,7 @@ html, body {
 body {
     background-image: url('../portfolio_axel/assets/images/background.jpg');
     color: #ffffff;
+    min-height: 100vh;
     height: 100dvh;
 }
 
@@ -156,6 +157,7 @@ main {
     justify-content: center;
     box-sizing: border-box;
     width: 100%;
+    min-height: 100vh;
 }
 
 /*                        STYLE TITLE                      */
