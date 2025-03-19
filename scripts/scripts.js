@@ -9,8 +9,6 @@ window.addEventListener('load', () => {
     const loadingElement = document.getElementById('loading');
     const introText = document.getElementById('intro-text');
 
-    document.documentElement.style.overflow = 'hidden';
-
     setTimeout(() => {
         introText.classList.add('visible');
     }, 1000);

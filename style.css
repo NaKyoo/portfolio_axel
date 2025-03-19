@@ -18,8 +18,9 @@ html, body {
 
     scroll-behavior: smooth;
     overflow-x: hidden;
-    scrollbar-color: #e6cc08 black;
+    overflow-y: hidden;
 
+    scrollbar-color: #e6cc08 black;
     scrollbar-width: thin;
 
     margin: 0;
@@ -748,6 +749,7 @@ span {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 10000;
 }
 .back-to-top:hover {
     background-color: #8a7009;
