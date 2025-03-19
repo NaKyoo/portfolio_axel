@@ -39,6 +39,9 @@ html, body {
 body {
     background-image: url('../portfolio_axel/assets/images/background.jpg');
     color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
     height: 100dvh;
 }

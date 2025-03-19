@@ -3,6 +3,14 @@
 window.addEventListener('load', () => {
     window.scrollTo(0, 0);
 });
+// ajuster page pour mobile
+
+function adjustHeight() {
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+}
+
+window.addEventListener('resize', adjustHeight);
+adjustHeight();
 
 
 window.addEventListener('load', () => {
