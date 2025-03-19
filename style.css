@@ -16,17 +16,13 @@
 }
 html, body {
 
-    background-color: black;
     scroll-behavior: smooth;
-    overflow-x: hidden;
-
     scrollbar-color: #e6cc08 black;
     scrollbar-width: thin;
 
     margin: 0;
     padding: 0;
     height: 100%;
-
 }
 
 
@@ -42,6 +38,7 @@ body {
     color: #ffffff;
     min-height: 100dvh;
     height: 100dvh;
+    background-color: black;
 }
 
 
