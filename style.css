@@ -513,14 +513,16 @@ span {
     gap: 2em;
     height: auto;
     object-fit: cover;
-    margin: 0 15% 5rem 15%;
+    margin: 0 20% 5rem 20%;
 
 }
 .project-item.reverse {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    gap: 5em;
+    justify-content: center;
+    gap: 2em;
+    height: auto;
     object-fit: cover;
     margin: 0 20% 5rem 20%;
 }
